@@ -4,6 +4,8 @@ import sasoptpy as so
 import requests
 import os
 
+import utility
+
 import time
 from subprocess import Popen, DEVNULL
 
@@ -12,40 +14,21 @@ def xmin_to_prob(xmin, sub_on=0.5, sub_off=0.3):
                 65 * sub_off - 25 * sub_on), 0.001), 0.999)
     return start + (1-start) * sub_on
 
+
 def get_data(team_id, gw, seed_val, horizon, randomized):
-    r = requests.get('https://fantasy.premierleague.com/api/bootstrap-static/')
-    fpl_data = r.json()
-    element_data = pd.DataFrame(fpl_data['elements'])
-    team_data = pd.DataFrame(fpl_data['teams'])
-    elements_team = pd.merge(element_data, team_data,
-                             left_on='team', right_on='id')
-    review_data = pd.read_csv("Data/fplreview.csv")
-    review_data = review_data.fillna(0)
-    review_data['review_id'] = review_data.index+1
-    merged_data = pd.merge(elements_team, review_data,
-                           left_on='id_x', right_on='review_id')
-    merged_data.set_index(['id_x'], inplace=True)
-
-    if randomized:
-        rng = np.random.default_rng(seed=seed_val)
-        gws = list(range(gw+1, min(39, gw+1+horizon)))
-        for w in gws:
-            noise = merged_data[f"{w}_Pts"] * (
-                92 - merged_data[f"{w}_xMins"]) / 134 * rng.standard_normal(size=len(merged_data))
-            merged_data[f"{w}_Pts"] = merged_data[f"{w}_Pts"] + noise
-
-    next_gw = int(review_data.keys()[6].split('_')[0])
-    type_data = pd.DataFrame(fpl_data['element_types']).set_index(['id'])
-
-    r = requests.get(
-        f'https://fantasy.premierleague.com/api/entry/{team_id}/event/{gw}/picks/')
-    picks_data = r.json()
-    initial_squad = [i['element'] for i in picks_data['picks']]
-    r = requests.get(f'https://fantasy.premierleague.com/api/entry/{team_id}/')
-    general_data = r.json()
-    itb = general_data['last_deadline_bank'] / 10
-
-    return {'merged_data': merged_data, 'team_data': team_data, 'type_data': type_data, 'next_gw': next_gw, 'initial_squad': initial_squad, 'itb': itb}
+    fpl_data = utility.get_fpl_data()
+    team_data = utility.get_team_data(fpl_data)
+    elements_team = utility.generate_team_elements(get_element_data(fpl_data), team_data)
+    review_data = utility.generate_review_data()
+    
+    return {
+        'merged_data': utility.get_merged_data(elements_team, review_data, randomized, gw, horizon), 
+        'team_data': team_data,
+        'type_data': utility.generate_type_data(fpl_data),
+        'next_gw': int(review_data.keys()[6].split('_')[0]),
+        'initial_squad': utility.get_initial_squad(team_id, gw),
+        'itb': utility.get_itb(team_id)
+    }
 
 
 def solve_multi_period_fpl(team_id, gw, ft, horizon, objective='regular', decay_base=0.84, bench_weights=None, seed=None, randomized=False):

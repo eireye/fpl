@@ -43,6 +43,10 @@ def rapport(data, gameweek):
     graftekst = "Graf med overikst over faktiske poeng og expected points"
     sum_expected = round(startlag(data,gameweek)["xP"].sum(),0)
     sum_expected_points_tekst = f"Forventet poeng med dette laget er : {sum_expected}"
+    pivot2 = pd.pivot_table(startlag(data, gameweek), index = ['name', 'team', "pos"], values = 'xP', aggfunc = 'sum' )
+    pivot_highlight = pivot2.style.format({'Sales':'${0:,.0f}'})\
+        .highlight_max(color='green')
+
 
     # 2. Combine them together using a long f-string
     html = f'''
@@ -55,7 +59,7 @@ def rapport(data, gameweek):
                 <p>{introtext}</p>
                 <p>{bytter}</p>
                 <h2>{startlagtekst}</h2>
-                {startlag(data,gameweek).to_html()}
+                {pivot_highlight.to_html()}
                 <p>{sum_expected_points_tekst}</p>
                 <h3>{benktekst}</h3>
                 {benklag(data, gameweek).to_html()}
@@ -68,4 +72,4 @@ def rapport(data, gameweek):
     with open('output/html_report.html', 'w') as f:
         f.write(html)
     
-rapport(latest_optimal_plan_data, 17)
+rapport(latest_optimal_plan_data, 19)

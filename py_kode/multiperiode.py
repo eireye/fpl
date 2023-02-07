@@ -269,7 +269,7 @@ def solve_multi_period_fpl(team_id, gw, ft, horizon, objective='regular', decay_
 
 def solve_standard_problem():
     r = solve_multi_period_fpl(
-        team_id=2821496, gw=18, ft=1, horizon=3, objective='regular')
+        team_id=2821496, gw=19, ft=1, horizon=3, objective='regular')
     print(r['picks'])
     print(r['summary'])
     r['picks'].to_csv("output/optimal_plan_regular.csv")
@@ -277,7 +277,7 @@ def solve_standard_problem():
 
 def solve_autobench_problem():
     r = solve_multi_period_fpl(
-        team_id=2821496, gw=18, ft=1, horizon=3, objective='regular')
+        team_id=2821496, gw=19, ft=1, horizon=3, objective='regular')
     print(r['picks'])
     print(r['summary'])
     r['picks'].to_csv('../output/optimal_plan_regular_stage_1.csv')
@@ -301,14 +301,14 @@ def solve_autobench_problem():
     bench_1_weight = 1 - prob
 
     bench_weights = {0: gk_weight, 1: bench_1_weight, 2: 0.06, 3: 0.002}
-    r = solve_multi_period_fpl(team_id=2821496, gw=18, ft=1,
+    r = solve_multi_period_fpl(team_id=2821496, gw=19, ft=1,
                                horizon=3, objective='regular', bench_weights=bench_weights)
     print(r['picks'])
     print(r['summary'])
     r['picks'].to_csv('../output/optimal_plan_regular_stage_2.csv')
 
 def solve_randomized_problem():
-    r = solve_multi_period_fpl(team_id=2821496, gw=19, ft=1,
+    r = solve_multi_period_fpl(team_id=2821496, gw=20, ft=1,
                                horizon=3, objective='regular', seed=None, randomized=True)
     print(r['picks'])
     print(r['summary'])

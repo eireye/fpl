@@ -72,4 +72,4 @@ def rapport(data, gameweek):
     with open('output/html_report.html', 'w') as f:
         f.write(html)
     
-rapport(latest_optimal_plan_data, 19)
+rapport(latest_optimal_plan_data, 20)

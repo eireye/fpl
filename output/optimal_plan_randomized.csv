@@ -1,17 +1,81 @@
 ,week,name,pos,type,team,buy_price,sell_price,xP,xMin,lineup,bench,captain,vicecaptain,transfer_in,transfer_out
-5,32,Raya,GKP,1,Brentford,4.9,4.8,3.93,89,1,-1,0,0,0,0
-14,32,Botman,DEF,2,Newcastle,4.5,4.5,3.53,85,1,-1,0,0,0,0
-13,32,Trippier,DEF,2,Newcastle,6.2,6.1,4.41,87,1,-1,0,0,0,0
-2,32,Gabriel,DEF,2,Arsenal,5.3,5.2,5.31,87,1,-1,0,0,0,0
-12,32,Alexander-Arnold,DEF,2,Liverpool,7.4,7.4,6.89,85,1,-1,0,0,1,0
-0,32,Ødegaard,MID,3,Arsenal,6.7,6.7,5.75,83,1,-1,0,0,0,0
-1,32,Saka,MID,3,Arsenal,8.5,8.2,7.04,82,1,-1,0,1,0,0
-11,32,Salah,MID,3,Liverpool,12.9,12.8,8.93,83,1,-1,1,0,0,0
-3,32,Watkins,FWD,4,Aston Villa,7.7,7.6,4.54,86,1,-1,0,0,0,0
-4,32,Solanke,FWD,4,Bournemouth,5.6,5.5,4.66,85,1,-1,0,0,0,0
-15,32,Kane,FWD,4,Spurs,11.6,11.6,4.71,87,1,-1,0,0,0,0
-10,32,Pickford,GKP,1,Everton,4.4,4.4,3.52,89,0,0,0,0,0,0
-9,32,James,DEF,2,Chelsea,5.8,5.8,0.0,0,0,-1,0,0,0,1
-6,32,Mee,DEF,2,Brentford,5.1,5.0,3.26,87,0,1,0,0,0,0
-7,32,Mac Allister,MID,3,Brighton,5.5,5.4,0.0,0,0,2,0,0,0,0
-8,32,Mitoma,MID,3,Brighton,5.7,5.4,0.0,0,0,3,0,0,0,0
+8,34,Ederson,GKP,1,Man City,5.4,5.4,8.34,89,1,-1,0,0,0,0
+12,34,Trippier,DEF,2,Newcastle,6.2,6.1,4.74,85,1,-1,0,0,0,0
+9,34,Dias,DEF,2,Man City,6.0,6.0,6.26,71,1,-1,0,0,0,0
+6,34,Robertson,DEF,2,Liverpool,6.8,6.8,8.22,74,1,-1,0,0,0,0
+7,34,Alexander-Arnold,DEF,2,Liverpool,7.5,7.4,9.88,86,1,-1,0,0,0,0
+0,34,March,MID,3,Brighton,5.2,5.2,7.78,82,1,-1,0,0,0,0
+11,34,Rashford,MID,3,Man Utd,7.1,7.1,8.79,76,1,-1,0,0,0,0
+2,34,Mitoma,MID,3,Brighton,5.6,5.3,9.22,81,1,-1,0,0,0,0
+1,34,Mac Allister,MID,3,Brighton,5.5,5.4,10.23,80,1,-1,0,1,0,0
+5,34,Salah,MID,3,Liverpool,13.0,12.9,13.92,81,1,-1,1,0,0,0
+10,34,Haaland,FWD,4,Man City,12.3,12.2,8.08,76,1,-1,0,0,0,0
+3,34,Arrizabalaga,GKP,1,Chelsea,4.7,4.7,2.83,82,0,0,0,0,0,0
+13,34,Botman,DEF,2,Newcastle,4.5,4.5,4.15,84,0,1,0,0,0,0
+4,34,Greenwood,FWD,4,Leeds,4.0,4.0,0.75,14,0,3,0,0,0,0
+14,34,Isak,FWD,4,Newcastle,6.8,6.8,2.14,59,0,2,0,0,0,0
+23,35,Ederson,GKP,1,Man City,5.4,5.4,4.14,88,1,-1,0,0,0,0
+21,35,Robertson,DEF,2,Liverpool,6.8,6.8,4.12,79,1,-1,0,0,0,0
+24,35,Dias,DEF,2,Man City,6.0,6.0,4.67,67,1,-1,0,0,0,0
+22,35,Alexander-Arnold,DEF,2,Liverpool,7.5,7.4,5.41,83,1,-1,0,1,0,0
+15,35,March,MID,3,Brighton,5.2,5.2,4.21,80,1,-1,0,0,0,0
+26,35,Rashford,MID,3,Man Utd,7.1,7.1,4.32,78,1,-1,0,0,0,0
+16,35,Mac Allister,MID,3,Brighton,5.5,5.4,4.36,78,1,-1,0,0,0,0
+17,35,Mitoma,MID,3,Brighton,5.6,5.3,4.72,79,1,-1,0,0,0,0
+20,35,Salah,MID,3,Liverpool,13.0,12.9,6.39,80,1,-1,1,0,0,0
+30,35,Isak,FWD,4,Newcastle,6.8,6.8,4.88,66,1,-1,0,0,0,0
+25,35,Haaland,FWD,4,Man City,12.3,12.2,5.25,73,1,-1,0,0,0,0
+18,35,Arrizabalaga,GKP,1,Chelsea,4.7,4.7,3.81,80,0,0,0,0,0,0
+28,35,Schär,DEF,2,Newcastle,5.1,5.1,2.76,81,0,2,0,0,1,0
+29,35,Botman,DEF,2,Newcastle,4.5,4.5,2.76,81,0,-1,0,0,0,1
+27,35,Trippier,DEF,2,Newcastle,6.2,6.1,3.43,84,0,1,0,0,0,0
+19,35,Greenwood,FWD,4,Leeds,4.0,4.0,0.85,15,0,3,0,0,0,0
+39,36,Ederson,GKP,1,Man City,5.4,5.4,4.1,88,1,-1,0,0,0,0
+38,36,Alexander-Arnold,DEF,2,Liverpool,7.5,7.4,4.8,80,1,-1,0,0,0,0
+44,36,Trippier,DEF,2,Newcastle,6.2,6.1,7.27,82,1,-1,0,0,0,0
+45,36,Schär,DEF,2,Newcastle,5.1,5.1,7.79,79,1,-1,0,1,0,0
+42,36,Rashford,MID,3,Man Utd,7.1,7.1,4.59,78,1,-1,0,0,0,0
+32,36,Mac Allister,MID,3,Brighton,5.5,5.4,5.39,76,1,-1,0,0,0,0
+36,36,Salah,MID,3,Liverpool,13.0,12.9,6.33,80,1,-1,0,0,0,0
+31,36,March,MID,3,Brighton,5.2,5.2,7.15,78,1,-1,0,0,0,0
+33,36,Mitoma,MID,3,Brighton,5.6,5.3,7.46,77,1,-1,0,0,0,0
+41,36,Haaland,FWD,4,Man City,12.3,12.2,6.72,72,1,-1,0,0,0,0
+43,36,Wilson,FWD,4,Newcastle,6.9,6.9,9.04,41,1,-1,1,0,1,0
+34,36,Arrizabalaga,GKP,1,Chelsea,4.7,4.7,3.42,80,0,0,0,0,0,0
+40,36,Dias,DEF,2,Man City,6.0,6.0,3.06,66,0,2,0,0,0,0
+37,36,Robertson,DEF,2,Liverpool,6.8,6.8,4.49,76,0,1,0,0,0,0
+35,36,Greenwood,FWD,4,Leeds,4.0,4.0,0.72,15,0,3,0,0,0,0
+46,36,Isak,FWD,4,Newcastle,6.8,6.8,5.82,63,0,-1,0,0,0,1
+55,37,Ederson,GKP,1,Man City,5.4,5.4,7.52,87,1,-1,0,0,0,0
+53,37,Robertson,DEF,2,Liverpool,6.8,6.8,4.44,75,1,-1,0,0,0,0
+63,37,Schär,DEF,2,Newcastle,5.1,5.1,4.72,78,1,-1,0,0,0,0
+56,37,Dias,DEF,2,Man City,6.0,6.0,5.02,67,1,-1,0,0,0,0
+58,37,Shaw,DEF,2,Man Utd,5.1,5.1,6.59,77,1,-1,0,0,1,0
+47,37,March,MID,3,Brighton,5.2,5.2,6.83,76,1,-1,0,0,0,0
+49,37,Mitoma,MID,3,Brighton,5.6,5.3,7.65,74,1,-1,0,0,0,0
+60,37,Rashford,MID,3,Man Utd,7.1,7.1,10.09,76,1,-1,0,0,0,0
+48,37,Mac Allister,MID,3,Brighton,5.5,5.4,10.17,77,1,-1,0,0,0,0
+59,37,Fernandes,MID,3,Man Utd,9.5,9.5,11.57,80,1,-1,0,1,1,0
+57,37,Haaland,FWD,4,Man City,12.3,12.2,13.43,71,1,-1,1,0,0,0
+50,37,Arrizabalaga,GKP,1,Chelsea,4.7,4.7,4.88,78,0,0,0,0,0,0
+62,37,Trippier,DEF,2,Newcastle,6.2,6.1,4.02,80,0,-1,0,0,0,1
+54,37,Alexander-Arnold,DEF,2,Liverpool,7.5,7.4,4.22,80,0,1,0,0,0,0
+52,37,Salah,MID,3,Liverpool,13.0,12.9,6.43,77,0,-1,0,0,0,1
+51,37,Greenwood,FWD,4,Leeds,4.0,4.0,0.57,13,0,3,0,0,0,0
+61,37,Wilson,FWD,4,Newcastle,6.9,6.9,3.66,41,0,2,0,0,0,0
+72,38,Ederson,GKP,1,Man City,5.4,5.4,4.12,87,1,-1,0,0,0,0
+73,38,Dias,DEF,2,Man City,6.0,6.0,3.87,64,1,-1,0,0,0,0
+75,38,Shaw,DEF,2,Man Utd,5.1,5.1,3.96,78,1,-1,0,0,0,0
+70,38,Robertson,DEF,2,Liverpool,6.8,6.8,4.48,74,1,-1,0,0,0,0
+71,38,Alexander-Arnold,DEF,2,Liverpool,7.5,7.4,5.24,80,1,-1,0,0,0,0
+66,38,Mac Allister,MID,3,Brighton,5.5,5.4,3.47,76,1,-1,0,0,0,0
+67,38,Mitoma,MID,3,Brighton,5.6,5.3,4.05,75,1,-1,0,0,0,0
+76,38,Fernandes,MID,3,Man Utd,9.5,9.5,4.46,79,1,-1,0,0,0,0
+77,38,Rashford,MID,3,Man Utd,7.1,7.1,5.7,76,1,-1,0,1,0,0
+64,38,Saka,MID,3,Arsenal,8.4,8.4,6.05,75,1,-1,1,0,1,0
+74,38,Haaland,FWD,4,Man City,12.3,12.2,4.87,70,1,-1,0,0,0,0
+68,38,Arrizabalaga,GKP,1,Chelsea,4.7,4.7,3.16,77,0,0,0,0,0,0
+79,38,Schär,DEF,2,Newcastle,5.1,5.1,3.0,74,0,1,0,0,0,0
+65,38,March,MID,3,Brighton,5.2,5.2,3.21,75,0,-1,0,0,0,1
+78,38,Wilson,FWD,4,Newcastle,6.9,6.9,0.06,37,0,3,0,0,0,0
+69,38,Greenwood,FWD,4,Leeds,4.0,4.0,1.23,15,0,2,0,0,0,0

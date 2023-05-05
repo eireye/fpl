@@ -4,3 +4,4 @@
  filter=lfs diff=lfs merge=lfs -text
 /Users/eirikoye/Documents/GitHub/FPL/Data filter=lfs diff=lfs merge=lfs -text
 /Users/eirikoye/Documents/GitHub/FPL/ filter=lfs diff=lfs merge=lfs -text
+Data/Teams_osx.pkg filter=lfs diff=lfs merge=lfs -text

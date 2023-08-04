@@ -19,7 +19,7 @@ def expected_points(data, next_gw):
 
     return int(expected_points.sum() + doubled_captain.sum())
 
-def write_data(gw):
+def write_data(df,gw):
     data = []
     try:
         # Try to load existing data
@@ -37,7 +37,7 @@ def write_data(gw):
             if confirmation.lower() == 'j':
                 data[i] = {
                     'Gameweek': gw,
-                    'XP': expected_points(latest_optimal_plan_data,gw)
+                    'XP': expected_points(df,gw)
                 }
             else:
                 print(f"Data ikke overskrevet for gameweek {gw}")
@@ -48,7 +48,7 @@ def write_data(gw):
         # Append new data if it doesn't already exist
         data.append({
             'Gameweek': gw,
-            'XP': expected_points(latest_optimal_plan_data,gw)
+            'XP': expected_points(df,gw)
         })
 
     # Write data back to file

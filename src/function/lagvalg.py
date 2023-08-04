@@ -30,7 +30,7 @@ def benklag(data, gameweek):
    
    return benk2.sort_values(by=['bench'])
 
-   def points_without_cap (data, next_gw):
+def points_without_cap (data, next_gw):
     """Gir summen av xP uten kapteinen, kan gjøres bedre etterhvert tenker jeg"""
     return data.loc[(data["week"]==next_gw)& (data['lineup']== 1) & (data["captain"]!=1), ["xP"]].sum()
 

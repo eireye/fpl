@@ -4,6 +4,10 @@
 # Except for .ipynb and .py files
 !*.ipynb
 !*.py
+!*.html
+!*.css
+!*.txt
+!*.md
 
 # And .gitignore file itself
 !.gitignore

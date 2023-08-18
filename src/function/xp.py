@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import requests
 
 
 def points_without_cap (data, next_gw):
@@ -23,7 +24,7 @@ def write_data(df,gw):
     data = []
     try:
         # Try to load existing data
-        with open('data.json', 'r') as file:
+        with open('xp_data.json', 'r') as file:
             
             data = json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
@@ -52,14 +53,40 @@ def write_data(df,gw):
         })
 
     # Write data back to file
-    with open('data.json', 'w') as file:
+    with open('xp_data.json', 'w') as file:
+        json.dump(data, file, indent=4)
+
+# Global dictionary to store data
+week_points_dict = {}
+
+
+def get_team_points(week, id):
+    team_id = str(id)
+    current_week = str(week)
+    url = "https://fantasy.premierleague.com/api/entry/"+team_id+"/event/"+current_week+"/picks/"
+    my_team_data = requests.get(url)
+    my_team_data = my_team_data.json()
+
+    try:
+        points_value = my_team_data["entry_history"]["points"]
+        week_points_dict[current_week] = points_value
+    except KeyError:
+        pass
+
+
+def save_data_to_json():
+    # Convert the week_points_dict to a list of dictionaries
+    data = [{'Gameweek': w, 'Points': p} for w, p in week_points_dict.items()]
+    
+    # Write the data to a JSON file
+    with open("poeng_data.json", 'w') as file:
         json.dump(data, file, indent=4)
 
 
-
 def expected_poeng():
-    df_poeng = pd.read_json('poeng_data.json', orient='records', lines=True)
-    df_xp = pd.read_json('xp_data.json', orient='records', lines=True)
+    df_poeng = pd.read_json('poeng_data.json')
+  
+    df_xp = pd.read_json('xp_data.json')
     df_poeng_expected = pd.merge(df_poeng, df_xp, on='Gameweek')
     return df_poeng_expected
 

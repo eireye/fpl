@@ -10,16 +10,16 @@ import plotly.offline as pyo
 
 def poeng_vs_expected_graf(data):
     # Calculate the mean of the "poeng" column
-    poeng_mean = data[data["poeng"] != 0]["poeng"].mean()
+    poeng_mean = data[data["Points"] != 0]["Points"].mean()
     
     # Calculate the mean of the "xp" column, excluding zero values
-    xp_mean = data[data["xp"] != 0]["xp"].mean()
+    xp_mean = data[data["XP"] != 0]["XP"].mean()
     
     # Create a line plot using Plotly
     fig = go.Figure()
     
-    fig.add_trace(go.Scatter(x=data["Gameweek"], y=data["poeng"], mode="lines+markers", name="Faktisk poeng"))
-    fig.add_trace(go.Scatter(x=data[data["xp"] != 0]["Gameweek"], y=data[data["xp"] != 0]["xp"], mode="lines+markers", name="Forventet poeng"))
+    fig.add_trace(go.Scatter(x=data["Gameweek"], y=data["Points"], mode="lines+markers", name="Faktisk poeng"))
+    fig.add_trace(go.Scatter(x=data[data["XP"] != 0]["Gameweek"], y=data[data["XP"] != 0]["XP"], mode="lines+markers", name="Forventet poeng"))
     fig.add_shape(type="line", x0=data["Gameweek"].min(), y0=poeng_mean, x1=data["Gameweek"].max(), y1=poeng_mean, line=dict(color="blue", width=5, dash="dot"), name="Gjennomsnitt faktisk poeng")
     fig.add_shape(type="line", x0=data["Gameweek"].min(), y0=xp_mean, x1=data["Gameweek"].max(), y1=xp_mean, line=dict(color="red", width=5, dash="dot"), name="Gjennomsnitt forventet poeng")
     

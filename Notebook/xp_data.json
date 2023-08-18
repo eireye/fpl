@@ -1,38 +1,10 @@
-{"Gameweek":1,"xp":12}
-{"Gameweek":2,"xp":18}
-{"Gameweek":3,"xp":97}
-{"Gameweek":4,"xp":78}
-{"Gameweek":5,"xp":51}
-{"Gameweek":6,"xp":86}
-{"Gameweek":7,"xp":70}
-{"Gameweek":8,"xp":38}
-{"Gameweek":9,"xp":17}
-{"Gameweek":10,"xp":73}
-{"Gameweek":11,"xp":18}
-{"Gameweek":12,"xp":54}
-{"Gameweek":13,"xp":69}
-{"Gameweek":14,"xp":34}
-{"Gameweek":15,"xp":28}
-{"Gameweek":16,"xp":11}
-{"Gameweek":17,"xp":54}
-{"Gameweek":18,"xp":37}
-{"Gameweek":19,"xp":63}
-{"Gameweek":20,"xp":59}
-{"Gameweek":21,"xp":84}
-{"Gameweek":22,"xp":6}
-{"Gameweek":23,"xp":45}
-{"Gameweek":24,"xp":24}
-{"Gameweek":25,"xp":64}
-{"Gameweek":26,"xp":48}
-{"Gameweek":27,"xp":79}
-{"Gameweek":28,"xp":61}
-{"Gameweek":29,"xp":2}
-{"Gameweek":30,"xp":15}
-{"Gameweek":31,"xp":92}
-{"Gameweek":32,"xp":49}
-{"Gameweek":33,"xp":9}
-{"Gameweek":34,"xp":95}
-{"Gameweek":35,"xp":69}
-{"Gameweek":36,"xp":85}
-{"Gameweek":37,"xp":17}
-{"Gameweek":38,"xp":92}
+[
+    {
+        "Gameweek": 1,
+        "XP": 66
+    },
+    {
+        "Gameweek": 2,
+        "XP": 55
+    }
+]

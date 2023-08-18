@@ -76,7 +76,7 @@ def rapport(data, gameweek):
     
         # Generate the HTML code for the plot
     plot_html = poeng_vs_expected_graf(expected_poeng())
-    plot_html2 = poeng_vs_expected_graf(expected_poeng_c())
+    #plot_html2 = poeng_vs_expected_graf(expected_poeng_c())
     
     captain = startlag(data,gameweek).loc[startlag(data,gameweek)['captain'] == 1, ['name', 'team']].squeeze()
     vice_captain = startlag(data,gameweek).loc[startlag(data,gameweek)['vicecaptain'] == 1, ['name', 'team']].squeeze()
@@ -191,7 +191,7 @@ def rapport(data, gameweek):
         
         {plot_html}
        <h2>{graftekst2}</h2>
-                {plot_html2}
+                {plot_html}
             
     </body>
 </html>

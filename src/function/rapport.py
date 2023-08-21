@@ -11,6 +11,7 @@ import plotly.offline as pyo
 import lagvalg
 import xp
 import plots
+from IPython.core.display import HTML, display
 
 
 from lagvalg import *
@@ -200,7 +201,8 @@ def rapport(data, gameweek):
 
 
 
-
+# Display the HTML in the notebook
+    display(HTML(html))
 # 3. Write the html string as an HTML file
     with open('../output/html_report.html', 'w') as f:
         f.write(html)

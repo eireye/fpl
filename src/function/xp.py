@@ -17,8 +17,11 @@ def expected_points(data, next_gw):
     doubled_captain= double_captain_points(data, next_gw)
     
     expected_points= points_without_cap(data, next_gw)
+    sum = float((expected_points.sum() + doubled_captain.sum()).iloc[0])
+    sum1 = int(round(sum,0))
 
-    return int(expected_points.sum() + doubled_captain.sum())
+    return sum1
+    
 
 def write_data(df,gw):
     data = []

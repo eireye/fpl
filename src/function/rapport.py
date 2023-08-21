@@ -191,8 +191,7 @@ def rapport(data, gameweek):
         <h2>{graftekst}</h2>
         
         {plot_html}
-       <h2>{graftekst2}</h2>
-                {plot_html}
+       
             
     </body>
 </html>

@@ -10,5 +10,17 @@
     {
         "Gameweek": "3",
         "Points": 56
+    },
+    {
+        "Gameweek": "4",
+        "Points": 74
+    },
+    {
+        "Gameweek": "5",
+        "Points": 39
+    },
+    {
+        "Gameweek": "6",
+        "Points": 57
     }
 ]

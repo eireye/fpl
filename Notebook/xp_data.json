@@ -21,7 +21,7 @@
     },
     {
         "Gameweek": 6,
-        "XP": 0
+        "XP": 63
     },
     {
         "Gameweek": 7,
@@ -29,10 +29,14 @@
     },
     {
         "Gameweek": 8,
-        "XP": 53
+        "XP": 55
     },
     {
         "Gameweek": 9,
-        "XP": 59
+        "XP": 60
+    },
+    {
+        "Gameweek": 10,
+        "XP": 57
     }
 ]
